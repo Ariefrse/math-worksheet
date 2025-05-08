@@ -281,9 +281,12 @@ function App() {
               </div>
 
               <ActionButtons 
-                onReset={resetWorksheet}
+                onReset={() => navigateQuestion('prev')}
+                onNext={() => navigateQuestion('next')}
                 onSubmit={calculateScore}
                 submitted={submitted}
+                currentQuestionIndex={currentQuestionIndex}
+                totalQuestions={questions.length}
               />
             </>
           )}
